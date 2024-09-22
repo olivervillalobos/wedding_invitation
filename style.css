@@ -123,7 +123,17 @@ header{
     height: 100vh;
     background-image: url(./resources/images/marriage_cover.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center left -139px;
+}
+@media screen and (max-width: 400px){
+    header{
+        background-position: center left -125px;
+    }
+}
+@media screen and (max-width: 380px){
+    header{
+        background-position: center left -100px;
+    }
 }
 .header-main-div{
     height: 100%;
@@ -137,7 +147,7 @@ header{
     justify-content: center;
     margin-top: 18rem;
 }
-@media only screen and (max-height: 820px){
+@media screen and (max-height: 820px){
     .timer{
         margin-top: 15rem;
     }

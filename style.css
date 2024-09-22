@@ -138,11 +138,6 @@ header{
     justify-content: center;
     margin-top: 18rem;
 }
-@media screen and (max-height: 820px){
-    .timer{
-        margin-top: 15rem;
-    }
-}
 .timer-item{
     text-align: center;
     margin: 0 0.25em;
@@ -191,4 +186,34 @@ h1{
 .header-information-child{
     width: 45%;
     text-align:center;
+}
+.wedding-overview{
+    background-color: var(--main-section-bg-color);
+    padding: 2em;
+}
+.wedding-overview-div{
+    color: var(--main-section-text-color);
+    font-family: var(--header-inner-text);
+}
+#wedding-overview-title{
+    font-size: var(--h1-size);
+    font-weight: 100;
+}
+#wedding-overview-date{
+    font-size: var(--h3-size);
+    font-weight: 100;
+}
+#wedding-overview-disclaimer{
+    font-size: var(--h3-size);
+    font-weight: 100;
+}
+#wedding-overview-description{
+    font-size: var(--p-text);
+    font-family: var(--text-light);
+    font-weight: 100;
+}
+@media screen and (max-height: 820px){
+    .timer{
+        margin-top: 15rem;
+    }
 }

@@ -135,7 +135,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 75%;
+    margin-top: 18rem;
+}
+@media only screen and (max-height: 820px){
+    .timer{
+        margin-top: 15rem;
+    }
 }
 .timer-item{
     text-align: center;
@@ -151,7 +156,6 @@ header{
     font-size: var(--p-text);
 }
 h1{
-    margin-top: 0.5rem;
     color: var(--header-caption-text-color);
     font-family: var(--header-caption);
     font-size: var(--header-size);
@@ -163,12 +167,14 @@ h1{
     display: flex;
     flex: 2 1 2;
     padding: 0.8em 1.2em;
-    margin: 70% 1em 0 1em;
+    margin: 1em;
     justify-content: center;
     align-items: center;
     font-size: var(--p-text);
     color: var(--header-inner-div-text-color);
     font-family: var(--header-inner-text);
+    position: absolute;
+    bottom: 0;
 }
 .header-information-vl{
     width: 10%;

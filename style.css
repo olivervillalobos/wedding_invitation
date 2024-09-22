@@ -123,21 +123,31 @@ header{
     height: 100vh;
     background-image: url(./resources/images/marriage_cover.jpg);
     background-size: cover;
-    background-position: center left -139px;
+    background-position: center left -65px;
+}
+@media screen and (max-width: 450px){
+    header{
+        background-position: center left -80px;
+    }
+}
+@media screen and (max-width: 420px){
+    header{
+        background-position: center left -90px;
+    }
 }
 @media screen and (max-width: 400px){
     header{
-        background-position: center left -125px;
+        background-position: center left -100px;
     }
 }
 @media screen and (max-width: 390px){
     header{
-        background-position: center left -88px;
+        background-position: center left -100px;
     }
 }
 @media screen and (max-width: 380px){
     header{
-        background-position: center left -100px;
+        background-position: center left -110px;
     }
 }
 .header-main-div{

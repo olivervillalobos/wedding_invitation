@@ -1,0 +1,187 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+/*
+2. Remove default margin
+*/
+* {
+margin: 0;
+}
+
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+}
+
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+font: inherit;
+}
+
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+
+/*
+8. Create a root stacking context
+*/
+#root, #__next {
+isolation: isolate;
+}
+@font-face {
+    font-family: 'caudex-bold';
+    src: url(./resources/fonts/Caudex/Caudex-Bold.ttf);
+}
+@font-face {
+    font-family: 'caudex-boldItalic';
+    src: url(./resources/fonts/Caudex/Caudex-BoldItalic.ttf);
+}
+@font-face {
+    font-family: 'caudex-italic';
+    src: url(./resources/fonts/Caudex/Caudex-Italic.ttf);
+}
+@font-face {
+    font-family: 'caudex-regular';
+    src: url(./resources/fonts/Caudex/Caudex-Regular.ttf);
+}
+@font-face {
+    font-family: 'pinyon';
+    src: url(./resources/fonts/Pinyon_Script/PinyonScript-Regular.ttf);
+}
+@font-face {
+    font-family: 'nunito';
+    src: url(./resources/fonts/Nunito/static/Nunito-Black.ttf);
+}
+@font-face {
+    font-family: 'nunito-light';
+    src: url(./resources/fonts/Nunito/static/Nunito-Light.ttf);
+}
+@font-face {
+    font-family: 'nunito-bold';
+    src: url(./resources/fonts/Nunito/static/Nunito-Bold.ttf);
+}
+:root{
+    /*Colors*/
+    --timer-color: #FCF8EB;
+    --header-caption-text-color: #332D2B;
+    --header-inner-div-bg-color: #E9F5DB;
+    --header-inner-div-text-color: #332D2B;
+    --main-section-bg-color: #97A97C;
+    --main-section-text-color: #FCF8EB;
+    --place-section-bg-color: #E9F5DB;
+    --place-section-text-color: #332D2B;
+    --dress-section-bg-color: #FCF8EB;
+    --dress-section-text-color: #332D2B;
+    --dress-code-color-one:#E9F5DB;
+    --dress-code-color-two:#CFE1B9;
+    --dress-code-color-three:#B5C99A;
+    --dress-code-color-four:#97A97C;
+    --dress-code-color-five:#87986A;
+    --dress-code-color-six:#718355;
+    --dress-code-color-seven:white;
+    --dress-code-color-eight:black;
+    --dress-code-color-nine: rgb(247, 233, 212);
+    /*Fonts*/
+    --timer-font: nunito-bold;
+    --header-caption: pinyon;
+    --header-inner-text: caudex-regular;
+    --headings-footer: caudex-regular;
+    --text: nunito;
+    --text-light: nunito-light;
+    /*Sizes*/
+    --header-size: 3rem;
+    --h1-size: 1.75rem;
+    --h2-size: 1.5rem;
+    --h3-size: 1.25rem;
+    --p-text: 1rem;
+    /*Margins*/
+    /*Paddings*/
+}
+header{
+    height: 100vh;
+    background-image: url(./resources/images/marriage_cover.jpg);
+    background-size: cover;
+    background-position: left -130px center;
+}
+.header-main-div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 17em;
+}
+.timer-item{
+    text-align: center;
+    margin: 0 0.25em;
+    color: var(--timer-color);
+}
+.timer-item p:nth-child(1){
+    font-family: var(--timer-font);
+    font-size: var(--h1-size);
+}
+.timer-item p:nth-child(2){
+    font-family: var(--text-light);
+    font-size: var(--p-text);
+}
+h1{
+    margin-top: 0.5em;
+    color: var(--header-caption-text-color);
+    font-family: var(--header-caption);
+    font-size: var(--header-size);
+    font-weight: 600;
+}
+.header-information{
+    background-color: var(--header-inner-div-bg-color);
+    border-radius: 80px / 80px;
+    display: flex;
+    flex: 2 1 2;
+    padding: 0.8em 1.2em;
+    margin: 15em 1em 0 1em;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--p-text);
+    color: var(--header-inner-div-text-color);
+    font-family: var(--header-inner-text);
+}
+.header-information-vl{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#vl{
+    border-left: 1px solid var(--header-inner-div-text-color);
+    height: 3rem;
+    width: 1px;
+}
+.header-information-child{
+    width: 45%;
+    text-align:center;
+}

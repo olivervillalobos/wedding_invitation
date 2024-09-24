@@ -376,7 +376,7 @@ footer{
     font-size: var(--h1-size);
 }
 #myBtn{
-    display: none;
+    display: none !important;
     position: fixed;
     bottom: 20px;
     right: 30px;

@@ -131,7 +131,6 @@ header{
     background-size: cover;
     background-position: center;
 }
-
 .header-main-div{
     height: 100%;
     display: flex;
@@ -139,32 +138,64 @@ header{
     align-items: center;
 }
 .timer{
+    margin-top: 17rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 18rem;
+    margin-bottom: 1rem;
 }
-.timer-item{
+.timer-item {
+    position: relative; /* Ensures the pseudo-element is positioned correctly */
     text-align: center;
     margin: 0 0.25em;
-    color: var(--timer-color);
+    background-color: transparent; /* No background here */
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 5rem;
+    z-index: 0; /* Ensure text remains on top */
 }
+
+.timer-item::before {
+    content: ''; /* Create the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsla(46, 74%, 95%, 0.5); /* Transparent background */
+    border-radius: 10px;
+    z-index: -1; /* This keeps the background behind the text */
+}
+
+.timer-item p {
+    position: relative;
+    z-index: 1; /* Force the text above the pseudo-element */
+    opacity: 1 !important; /* Ensure the text is fully opaque */
+    color: var(--header-inner-div-text-color) !important; /* Force color */
+}
+
+
 .timer-item p:nth-child(1){
-    font-family: var(--timer-font);
-    font-size: var(--h1-size);
+    color: var(--header-inner-div-text-color); /* Solid text color */
+    font-family: var(--header-inner-text);
+    font-size: var(--header-size);
 }
+
 .timer-item p:nth-child(2){
-    font-family: var(--text-light);
+    color: var(--header-inner-div-text-color); /* Solid text color */
+    font-family: var(--header-inner-text);
     font-size: var(--p-text);
 }
+
 h1{
-    color: var(--header-caption-text-color);
+    margin-top: 17rem;
+    color: var(--timer-color);
     font-family: var(--header-caption);
     font-size: var(--header-size);
-    font-weight: 600;
+    font-weight: 300;
 }
 .header-information{
-    background-color: var(--header-inner-div-bg-color);
+    background-color: var(--main-section-bg-color);
     border-radius: 80px / 80px;
     display: flex;
     flex: 2 1 2;
@@ -173,10 +204,13 @@ h1{
     justify-content: center;
     align-items: center;
     font-size: var(--p-text);
-    color: var(--header-inner-div-text-color);
+    color: var(--main-section-text-color);
     font-family: var(--header-inner-text);
     position: absolute;
     bottom: 0;
+    .a-link:link, .a-link:visited, .a-link:active {
+        color: var(--main-section-text-color);
+    }
 }
 .header-information-vl{
     width: 10%;
@@ -185,7 +219,7 @@ h1{
     justify-content: center;
 }
 #vl{
-    border-left: 1px solid var(--header-inner-div-text-color);
+    border-left: 1px solid var(--main-section-text-color);
     height: 3rem;
     width: 1px;
 }
@@ -193,8 +227,9 @@ h1{
     width: 45%;
     text-align:center;
 }
+
 .a-link:link, .a-link:visited, .a-link:active {
-    color: var(--header-inner-div-text-color);
+    color: var(--place-section-text-color);
 }
 .a-link:hover{
     color: #718355;
@@ -329,7 +364,7 @@ h1{
     gap: 0.5rem;
 }
 footer{
-    background-color: #AC5E23;
+    background-color: var(--main-section-bg-color);
     padding: 3em 2em; 
     color: var(--main-section-text-color);  
 }

@@ -48,7 +48,7 @@
                     <div id="vl"></div>
                 </div>
                 <div class="header-information-child">
-                    <p><a href="https://maps.app.goo.gl/nErwvjwsGwrpWw3e6" target="_blank">Gulisanos, Torre Torela, Calete</a></p>
+                    <p><a class="a-link" href="https://maps.app.goo.gl/nErwvjwsGwrpWw3e6" target="_blank">Gulisanos, Torre Torela, Calete</a></p>
                 </div>
             </div>
         </div>
@@ -58,42 +58,69 @@
             <div class="wedding-overview-div">
                 <h2 id="wedding-overview-title">Nuestra boda se acerca</h2>
                 <h3 id="wedding-overview-date">Sábado, Oct. 19, 2024</h3>
-                <img src="./resources/images/wedding_rings.jpg" alt="">
+                <figure class="polaroid">
+                    <img id="polaroid-img"
+                       src="./resources/images/flowers_rings.jpg"
+                       alt=""
+                    />
+                </figure>
                 <h3 id="wedding-overview-disclaimer">Estamos encantados de invitarte a celebrar nuestro matrimonio</h3>
                 <p id="wedding-overview-description">Tu presencia en este día tan especial significará mucho para nosotros. Celebrar el amor rodeados de nuestros amigos y familiares es un sueño hecho realidad. Esperamos compartir risas, alegría y momentos inolvidables mientras comenzamos juntos esta nueva aventura.</p>
             </div>
         </section>
-        <section>
+        <section id="place-section">
             <div>
-                <a href="https://maps.app.goo.gl/hwuyuGFfr7sJMHpx5">
-                    <img src="./resources/images/logo_hotel.jpg" alt="">
-                    <h2>Fotos</h2>
-                    <p>Blvd. Cuauhtemoc Sur 213, Davila, 22044 Tijuana, B.C.</p>
+                <a  class="a-link" href="https://maps.app.goo.gl/hwuyuGFfr7sJMHpx5" target="_blank">
+                    <div class="place-card">
+                        <figure class="place-polaroid">
+                            <img 
+                            class="place-img"
+                               src="./resources/images/logo_hotel.jpg"
+                               alt=""
+                            />
+                            <p class="inner-polaroid-text">1:00 PM</p>
+                        </figure>
+                        <br>
+                        <h2 class="place-header">Fotos</h2>
+                        <br>
+                        <p class="place-text">Blvd. Cuauhtemoc Sur 213, Davila, 22044 Tijuana, B.C.</p>
+                        <a  class="a-link place-button right-btn" href="https://maps.app.goo.gl/hwuyuGFfr7sJMHpx5" target="_blank">Detalles</a>
+                    </div>
                 </a>
             </div>
             <div>
-                <a href="https://maps.app.goo.gl/nErwvjwsGwrpWw3e6" target="_blank">
-                    <img src="./resources/images/logo_gulisanos.png" alt="">
-                    <h2>Celebración</h2>
-                    <p>Torre Torela, Calle Priv. Manuel Doblado #2721-Local 5 y 6, Calete, 22044 Tijuana, B.C.</p>
+                <a class="a-link" href="https://maps.app.goo.gl/nErwvjwsGwrpWw3e6" target="_blank">
+                    <div class="place-card">
+                        <figure class="place-polaroid">
+                            <img class="place-img"
+                               src="./resources/images/logo_gulisanos.png"
+                               alt=""
+                            />
+                            <p class="inner-polaroid-text">2:30 PM</p>
+                        </figure>
+                        <br>
+                        <h2 class="place-header">Celebración</h2>
+                        <br>
+                        <p class="place-text">Torre Torela, Calle Priv. Manuel Doblado #2721-Local 5 y 6, Calete, 22044 Tijuana, B.C.</p>
+                        <a class="a-link place-button left-btn" href="https://maps.app.goo.gl/nErwvjwsGwrpWw3e6" target="_blank">Detalles</a>
+                    </div>
                 </a>
             </div>
         </section>
-        <section>
-            <h2>Código de Vestimenta</h2>
-            <h3>Colores de boda</h3>
-            <p>Por favor, viste de manera semi formal en nuestra celebración.</p>
-            <div>
-                <div class="dress-color"></div>
-                <div class="dress-color"></div>
-                <div class="dress-color"></div>
-                <div class="dress-color"></div>
-            </div>
+        <section id="menu">
+            <h2 class="place-header align-left">Menú</h2>
+            <p class="place-text align-left up-down-mar">Estamos organizando un banquete delicioso. <strong>Asegúrate de enviarnos tu selección de menú a través de WhatsApp a más tardar el día viernes 11 de octubre</strong> para que todos disfrutemos juntos.</p>
+            <a class="a-link place-button right-btn" href="https://www.canva.com/design/DAGRn-is4kA/D4fLKjPfHFGSG_pUn_BAhA/view?utm_content=DAGRn-is4kA&utm_campaign=designshare&utm_medium=link&utm_source=editor " target="_blank">Ver</a>
+        </section>
+        <section id="dress-section">
+            <h2 class="place-header align-left">Código de Vestimenta</h2>
+            <p class="place-text align-left">Por favor, viste de manera semi formal en nuestra celebración.</p>
         </section>
     </main>
     <footer>
-        <p>O & M</p>
-        <p>"Este día es un reflejo del amor que compartimos, y queremos que lo vivas con nosotros. ¡Esperamos verte en nuestra celebración!"</p>
+        <p id="footer-caption" class="place-header align-left">O & M</p>
+        <br>
+        <p id="footer-text" class="place-text align-left">"Este día es un reflejo del amor que compartimos, y queremos que lo vivas con nosotros. ¡Esperamos verte en nuestra celebración!"</p>
     </footer>
     <script src="app.js"></script>
 </body>

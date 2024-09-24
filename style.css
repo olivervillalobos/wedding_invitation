@@ -50,6 +50,12 @@ overflow-wrap: break-word;
 #root, #__next {
 isolation: isolate;
 }
+a{
+    text-decoration: none;
+}
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
 @font-face {
     font-family: 'caudex-bold';
     src: url(./resources/fonts/Caudex/Caudex-Bold.ttf);
@@ -187,13 +193,22 @@ h1{
     width: 45%;
     text-align:center;
 }
+.a-link:link, .a-link:visited, .a-link:active {
+    color: var(--header-inner-div-text-color);
+}
+.a-link:hover{
+    color: #718355;
+}
 .wedding-overview{
     background-color: var(--main-section-bg-color);
-    padding: 2em;
+    padding: 3em 2em;
 }
 .wedding-overview-div{
     color: var(--main-section-text-color);
     font-family: var(--header-inner-text);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 #wedding-overview-title{
     font-size: var(--h1-size);
@@ -203,6 +218,15 @@ h1{
     font-size: var(--h3-size);
     font-weight: 100;
 }
+.polaroid {
+    background-color: var(--main-section-text-color);
+    padding: 1rem 1rem 4rem;
+    box-shadow: 5px 7px 4px #888888;
+}
+#polaroid-img{
+    object-fit: cover; 
+    object-position: center;
+}
 #wedding-overview-disclaimer{
     font-size: var(--h3-size);
     font-weight: 100;
@@ -211,6 +235,106 @@ h1{
     font-size: var(--p-text);
     font-family: var(--text-light);
     font-weight: 100;
+}
+#place-section{
+    background-color: var(--place-section-bg-color);
+    color: var(--place-section-text-color);
+    padding: 3em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.place-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+.place-polaroid{
+    background-color: var(--main-section-text-color);
+    box-shadow: 5px 7px 4px #888888;
+    height: 400px;
+    padding: 1rem 1rem 3rem;
+}
+.inner-polaroid-text{
+    margin-top: 0.5rem;
+    text-align: center;
+    font-family: var(--header-caption);
+    font-size: var(--h2-size);
+}
+.place-polaroid:hover{
+    scale: 1.03;
+}
+.place-img{
+    height: 100%;
+    width: 100%;
+    object-fit:fill;
+}
+.place-header{
+    text-align: center;
+    font-family: var(--header-inner-text);
+    font-size: var(--h2-size);
+}
+.place-text{
+    text-align: center;
+    font-family: var(--text-light);
+    font-size: var(--p-text);
+}
+.place-button{
+    background-color: var(--main-section-bg-color);
+    box-shadow: 5px 7px 4px #888888;
+    padding: 1rem 2rem;
+    border-radius: 80px / 80px;
+    color: var(--main-section-text-color) !important;
+    font-family: var(--headings-footer);
+}
+.place-button:hover{
+    scale: 1.05;
+}
+#menu{
+    background-color: var(--dress-section-bg-color);
+    padding: 3em 2em 0;  
+}
+.align-left{
+    text-align: left;
+}
+.up-down-mar{
+    margin: 0.5rem 0 2rem;
+}
+.right-btn{
+    -webkit-border-top-left-radius: 200px;
+    -webkit-border-bottom-right-radius: 200px;
+    -moz-border-radius-topleft: 200px;
+    -moz-border-radius-bottomright: 200px;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+.left-btn{
+    -webkit-border-top-right-radius: 200px;
+    -webkit-border-bottom-left-radius: 200px;
+    -moz-border-radius-topright: 200px;
+    -moz-border-radius-bottomleft: 200px;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 200px;
+    }
+#dress-section{
+    background-color: var(--dress-section-bg-color);
+    padding: 3em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+footer{
+    background-color: #AC5E23;
+    padding: 3em 2em; 
+    color: var(--main-section-text-color);  
+}
+#footer-caption{
+    font-size: var(--h1-size);
 }
 @media screen and (max-height: 820px){
     .timer{

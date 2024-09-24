@@ -49,6 +49,7 @@ overflow-wrap: break-word;
 */
 #root, #__next {
 isolation: isolate;
+font-size: 16px;
 }
 a{
     text-decoration: none;

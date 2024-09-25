@@ -16,11 +16,10 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-  // Output the result in an element with id="demo"
+  // Output the result in an element with id="days", "hours", and "minutes"
   document.getElementById("days").innerHTML = days;
   document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = hours;
-  document.getElementById("seconds").innerHTML = seconds;
+  document.getElementById("minutes").innerHTML = minutes;
 }, 1000);
 
 // Get the button

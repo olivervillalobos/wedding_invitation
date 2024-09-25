@@ -8,48 +8,33 @@
     <title>Michelle & Oliver</title>
 </head>
 <body>
-
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-caret-up"></i></button>
 
     <header>
-        <div class="header-main-div">
-            <h1>Michelle & Oliver</h1>
-            <div class="timer">
-                <div class="timer-item">
-                    <p id="days"></p>
-                    <p>Días</p>
-                </div>
-                <div class="timer-item">
-                    <p id="hours"></p>
-                    <p>Horas</p>
-                </div>
-                <div class="timer-item">
-                    <p id="minutes"></p>
-                    <p>Minutos</p>
-                </div>
-            </div>
-            <div class="header-information">
-                <div class="header-information-child">
-                    <p>Sábado, Oct. 19, 2024</p>
-                </div>
-                <div class="header-information-vl">
-                    <div id="vl"></div>
-                </div>
-                <div class="header-information-child">
-                    <p><a class="a-link" href="https://maps.app.goo.gl/nErwvjwsGwrpWw3e6" target="_blank">Gulisanos, Torre Torela, Calete.</a></p>
-                </div>
-            </div>
-        </div>
     </header>
     <main>
         <section class="wedding-overview">
             <div class="wedding-overview-div">
-                    <h2 id="wedding-overview-title">Nuestra boda se acerca...</h2>
-                <h3 id="wedding-overview-date">Sábado, Oct. 19, 2024</h3>
+                <h2 id="wedding-overview-title" class="text-align">Nuestra boda se acerca...</h2>
+                <div class="timer">
+                    <div class="timer-item">
+                        <p id="days"></p>
+                        <p>Días</p>
+                    </div>
+                    <div class="timer-item">
+                        <p id="hours"></p>
+                        <p>Horas</p>
+                    </div>
+                    <div class="timer-item">
+                        <p id="minutes"></p>
+                        <p>Minutos</p>
+                    </div>
+                </div>
+                <h3 id="wedding-overview-date" class="text-align">Sábado, Oct. 19, 2024</h3>
                 <figure class="polaroid">
                     <img id="polaroid-img"
-                       src="./resources/images/flowers_rings.jpg"
-                       alt=""
+                    src="./resources/images/flowers_rings.jpg"
+                    alt=""
                     />
                 </figure>
                 <h3 id="wedding-overview-disclaimer">Estamos encantados de invitarte a celebrar nuestro matrimonio</h3>
@@ -66,13 +51,12 @@
                                src="./resources/images/logo_hotel.jpg"
                                alt=""
                             />
-                            <p class="inner-polaroid-text">1:00 PM</p>
+                            <p class="inner-polaroid-text">Ceremonia y Fotos</p>
                         </figure>
                         <br>
-                        <h2 class="place-header">Ceremonia y Fotos</h2>
-                        <br>
-                        <p class="place-text">Blvd. Cuauhtemoc Sur 213, Davila, 22044 Tijuana, B.C.</p>
-                        <a  class="a-link place-button right-btn" href="https://maps.app.goo.gl/hwuyuGFfr7sJMHpx5" target="_blank">Detalles</a>
+                        <p class="place-text">Hora</p>
+                        <p class="place-text">1:00 PM</p>
+                        <a  class="a-link place-button" href="https://maps.app.goo.gl/hwuyuGFfr7sJMHpx5" target="_blank">Ubicación</a>
                     </div>
                 </a>
             </div>
@@ -84,31 +68,44 @@
                                src="./resources/images/logo_gulisanos.png"
                                alt=""
                             />
-                            <p class="inner-polaroid-text">2:30 PM</p>
+                            <p class="inner-polaroid-text">Celebración</p>
                         </figure>
                         <br>
-                        <h2 class="place-header">Celebración</h2>
-                        <br>
-                        <p class="place-text">Torre Torela, Calle Priv. Manuel Doblado #2721-Local 5 y 6, Calete, 22044 Tijuana, B.C.</p>
-                        <a class="a-link place-button left-btn" href="https://maps.app.goo.gl/nErwvjwsGwrpWw3e6" target="_blank">Detalles</a>
+                        <p class="place-text">Hora</p>
+                        <p class="place-text">2:30 PM</p>
+                        <a class="a-link place-button" href="https://maps.app.goo.gl/nErwvjwsGwrpWw3e6" target="_blank">Ubicación</a>
                     </div>
                 </a>
             </div>
         </section>
         <section id="menu">
-            <h2 class="place-header align-left">Menú</h2>
+            <div class="menu-flex">
+                <h2 class="place-header align-left">Menú</h2>
+                <img src="./resources/images/1.png" alt="">
+            </div>
             <p class="place-text align-left up-down-mar">Estamos organizando un banquete delicioso. <strong>Asegúrate de enviarnos tu selección de menú a través de WhatsApp a más tardar el día viernes 11 de octubre</strong> para que todos disfrutemos juntos.</p>
-            <a class="a-link place-button right-btn" href="https://www.canva.com/design/DAGRn-is4kA/D4fLKjPfHFGSG_pUn_BAhA/view?utm_content=DAGRn-is4kA&utm_campaign=designshare&utm_medium=link&utm_source=editor " target="_blank">Ver</a>
+            <a class="a-link place-button" href="https://www.canva.com/design/DAGRpdVc40c/wNLsiZ_j_D1iL7_CLt-WiA/view?utm_content=DAGRpdVc40c&utm_campaign=designshare&utm_medium=link&utm_source=editor " target="_blank">Ver Menú</a>
         </section>
         <section id="dress-section">
-            <h2 class="place-header align-left">Código de Vestimenta</h2>
+            <br>
+            <div class="menu-flex">
+                <h2 class="place-header align-left">Código de Vestimenta</h2>
+                <img id="gancho" src="./resources/images/2.png" alt="">
+            </div>
             <p class="place-text align-left">Por favor, viste de manera semi formal en nuestra celebración.</p>
+            <p class="place-text disclaimer">Les agradeceríamos que no vistieran en colores blanco, beige o rojo.</p>
         </section>
     </main>
     <footer>
-        <p id="footer-caption" class="place-header align-left">O & M</p>
-        <br>
-        <p id="footer-text" class="place-text align-left">"Este día es un reflejo del amor que compartimos, y queremos que lo vivas con nosotros. ¡Esperamos verte en nuestra celebración!"</p>
+        <div class="footer-text">
+            <p id="footer-caption" class="place-header align-left">M & O</p>
+            <br>
+            <p id="footer-text" class="place-text align-left">"Este día es un reflejo del amor que compartimos, y queremos que lo vivas con nosotros. <br>
+            ¡Esperamos verte en nuestra celebración!"</p>
+        </div>
+        <div class="assist">
+            <img src="./resources/images/Diseño sin título.png" alt="">
+        </div>
     </footer>
     <script src="app.js"></script>
 </body>

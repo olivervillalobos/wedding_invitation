@@ -91,12 +91,12 @@ a:link, a:visited, a:hover, a:active {
 }
 :root{
     /*Colors*/
-    --timer-color: #FCF8EB;
+    --timer-color: white;
     --header-caption-text-color: #332D2B;
     --header-inner-div-bg-color: #E9F5DB;
     --header-inner-div-text-color: #332D2B;
-    --main-section-bg-color: #97A97C;
-    --main-section-text-color: #FCF8EB;
+    --main-section-bg-color: #B5C99A;
+    --main-section-text-color: white;
     --place-section-bg-color: #E9F5DB;
     --place-section-text-color: #332D2B;
     --dress-section-bg-color: #FCF8EB;
@@ -132,105 +132,6 @@ header{
     background-size: cover;
     background-position: center;
 }
-.header-main-div{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.timer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    margin-bottom: 8rem;
-    bottom: 0;
-}
-.timer-item {
-    position: relative; /* Ensures the pseudo-element is positioned correctly */
-    text-align: center;
-    margin: 0 0.25em;
-    background-color: transparent; /* No background here */
-    border-radius: 10px;
-    padding: 0.5rem;
-    width: 5rem;
-    z-index: 0; /* Ensure text remains on top */
-}
-
-.timer-item::before {
-    content: ''; /* Create the pseudo-element */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: hsla(46, 74%, 95%, 0.5); /* Transparent background */
-    border-radius: 10px;
-    z-index: -1; /* This keeps the background behind the text */
-}
-
-.timer-item p {
-    position: relative;
-    z-index: 1; /* Force the text above the pseudo-element */
-    opacity: 1 !important; /* Ensure the text is fully opaque */
-    color: var(--header-inner-div-text-color) !important; /* Force color */
-}
-
-
-.timer-item p:nth-child(1){
-    color: var(--header-inner-div-text-color); /* Solid text color */
-    font-family: var(--header-inner-text);
-    font-size: var(--header-size);
-}
-
-.timer-item p:nth-child(2){
-    color: var(--header-inner-div-text-color); /* Solid text color */
-    font-family: var(--header-inner-text);
-    font-size: var(--p-text);
-}
-
-h1{
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 45vh;
-    color: var(--timer-color);
-    font-family: var(--header-caption);
-    font-size: var(--header-size);
-    font-weight: 300;
-}
-.header-information{
-    background-color: var(--main-section-bg-color);
-    border-radius: 80px / 80px;
-    display: flex;
-    flex: 2 1 2;
-    padding: 0.8em 1.2em;
-    margin: 1em;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--p-text);
-    color: var(--main-section-text-color);
-    font-family: var(--header-inner-text);
-    position: absolute;
-    bottom: 0;
-    .a-link:link, .a-link:visited, .a-link:active {
-        color: var(--main-section-text-color);
-    }
-}
-.header-information-vl{
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#vl{
-    border-left: 1px solid var(--main-section-text-color);
-    height: 3rem;
-    width: 1px;
-}
-.header-information-child{
-    width: 45%;
-    text-align:center;
-}
 
 .a-link:link, .a-link:visited, .a-link:active {
     color: var(--place-section-text-color);
@@ -252,6 +153,31 @@ h1{
 #wedding-overview-title{
     font-size: var(--h1-size);
     font-weight: 100;
+}
+.timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timer-item {
+    text-align: center;
+    margin: 0 0.25em;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 5rem;
+    background-color: var(--timer-color);
+}
+
+.timer-item p:nth-child(1){
+    color: var(--header-inner-div-text-color); /* Solid text color */
+    font-family: var(--header-inner-text);
+    font-size: var(--header-size);
+}
+
+.timer-item p:nth-child(2){
+    color: var(--header-inner-div-text-color); /* Solid text color */
+    font-family: var(--header-inner-text);
+    font-size: var(--p-text);
 }
 #wedding-overview-date{
     font-size: var(--h3-size);
@@ -275,8 +201,13 @@ h1{
     font-family: var(--text-light);
     font-weight: 100;
 }
+
+.text-align{
+    text-align: center;
+}
+
 #place-section{
-    background-color: var(--place-section-bg-color);
+    background-color: white;
     color: var(--place-section-text-color);
     padding: 3em 2em;
     display: flex;
@@ -294,10 +225,11 @@ h1{
 
 }
 .place-polaroid{
-    background-color: var(--main-section-text-color);
+    background-color: white;
     box-shadow: 5px 7px 4px #888888;
     height: 400px;
     padding: 1rem 1rem 3rem;
+    border: 1px solid rgb(230, 230, 230);
 }
 .inner-polaroid-text{
     margin-top: 0.5rem;
@@ -325,7 +257,6 @@ h1{
 }
 .place-button{
     background-color: var(--main-section-bg-color);
-    box-shadow: 5px 7px 4px #888888;
     padding: 1rem 2rem;
     border-radius: 80px / 80px;
     color: var(--main-section-text-color) !important;
@@ -338,43 +269,65 @@ h1{
     background-color: var(--dress-section-bg-color);
     padding: 3em 2em 0;  
 }
+.menu-flex{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    img{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    #gancho{
+        height: 4rem;
+        width: 4rem;
+    }
+}
 .align-left{
     text-align: left;
 }
 .up-down-mar{
     margin: 0.5rem 0 2rem;
 }
-.right-btn{
-    -webkit-border-top-left-radius: 200px;
-    -webkit-border-bottom-right-radius: 200px;
-    -moz-border-radius-topleft: 200px;
-    -moz-border-radius-bottomright: 200px;
-    border-top-left-radius: 200px;
-    border-bottom-right-radius: 200px;
-}
-.left-btn{
-    -webkit-border-top-right-radius: 200px;
-    -webkit-border-bottom-left-radius: 200px;
-    -moz-border-radius-topright: 200px;
-    -moz-border-radius-bottomleft: 200px;
-    border-top-right-radius: 200px;
-    border-bottom-left-radius: 200px;
-    }
 #dress-section{
     background-color: var(--dress-section-bg-color);
     padding: 3em 2em;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+}
+.disclaimer{
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--main-section-bg-color);
+    color: var(--main-section-text-color);
 }
 footer{
     background-color: var(--main-section-bg-color);
-    padding: 3em 2em; 
-    color: var(--main-section-text-color);  
+    padding: 2em 2em; 
+    color: var(--main-section-text-color); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 #footer-caption{
     font-size: var(--h1-size);
+    text-align: center;
 }
+.footer-text{
+    flex: 1;
+    width: 100%;
+}
+#footer-text{
+    font-size: 0.8rem;
+    text-align: center;
+}
+.assist{
+    flex: 1;
+    img{
+        transform: rotate(10deg);
+    }
+}
+
 #myBtn{
     display: none;
     position: fixed;
@@ -391,9 +344,4 @@ footer{
     background-color: var(--main-section-bg-color);
     box-shadow: 1px 2px 1px #888888;
 
-}
-@media screen and (max-height: 820px){
-    .timer{
-        margin-top: 15rem;
-    }
 }
